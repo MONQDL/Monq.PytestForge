@@ -26,6 +26,7 @@ HUB_TIMEZONE = os.getenv('HUB_TIMEZONE') or os.getenv('SELENOID_TIMEZONE') or 'E
 HUB_HOSTS = os.getenv('HUB_HOSTS') or os.getenv('SELENOID_HOSTS')
 HUB_ENV = os.getenv('HUB_ENV') or os.getenv('SELENOID_ENV')
 X_FMONQ_PROJECT_KEY = os.getenv('X_FMONQ_PROJECT_KEY')
+HTTP_PROXY = os.getenv('HTTP_PROXY')
 
 if os.getenv('AGGREGATOR_URL'):
     parsed_url = urlparse(os.getenv('AGGREGATOR_URL'))

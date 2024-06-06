@@ -35,6 +35,8 @@ def chrome_options():
     if settings.LOCAL_DRIVER:
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--no-sandbox')
+    if settings.HTTP_PROXY:
+        options.add_argument(f"--proxy-server={settings.HTTP_PROXY}")
     return options.to_capabilities()
 
 
